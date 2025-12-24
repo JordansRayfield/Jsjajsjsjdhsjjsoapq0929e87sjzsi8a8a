@@ -1,0 +1,322 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+-- SERVICES
+local Players = game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('wjRidQlaRvtBPohzoDDTOEHvxWDVyQtVccmpdtWuJXbLxyZcDzjvbYMUGxheWVycw=='))
+local TextChatService = game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('LcLMaXqAUfbiqFzwkLhDrneelPTzHMRjuzGzEImKXaZmYrvoSKaqQvgVGV4dENoYXRTZXJ2aWNl'))
+local ReplicatedStorage = game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('gnZmKIqleGZzbRLiAyxdxiGnMaoylFlBeQPpMgfwFJbueNAQJlXmpxMUmVwbGljYXRlZFN0b3JhZ2U='))
+local TextService = game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('TKxabXxHXszHsoeKnxpfOlbTeqbUhqcjdAfaclEGlyjMgWSSLcAxwypVGV4dFNlcnZpY2U='))
+local TweenService = game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('EfFRHwxbZjJeitfwwmbeGirICaxYHrPayHcMdXuqQPAubKgmPVfXqJKVHdlZW5TZXJ2aWNl'))
+local player = Players.LocalPlayer
+local PlayerGui = player:WaitForChild(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('RHdMhTVGVesJBEpQgAmmYnygrrJDotSszjDFuEAQJTUpNVSrJGaUnxsUGxheWVyR3Vp'))
+
+-- KEY & METHODS
+local KEY = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WyMyaZEkHyhcXdCXiqFQJMKbIQkgOOHYynkeQvGvfNeKwddWvpNTEwqSm9yZGFuc0tleQ==')
+local methods = {
+    Comma = {a=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('MRwxhfYrcPTQRyVuZYXoaCXyIULdUMBTIwpqmTZedCNQrbFtDFlVTpZ2I1h2I0='),b=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WFvintODCYzOdQuyitVvmQSaMZJuLnVANldCzDRLzLGIpLwBkBYQwwz2I1i2I0='),c=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VSqNiXqAyhnWqtiVdpjlfvckXblMGRvsJQdtaLElLuHcDzFTRdLxose2I1j2I0='),d=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('kpRLmBxjQKpoSZodWtYTwnirUKholKMKGKmrwFEgCLmqQJaOQgMMwom2I1k2I0='),e=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('BKADkbnbPLpbNksuliIMdtOxuefDQYuttDdlriJOjQkoqyLrctPkrSq2I1l2I0='),f=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('RzZdcasxocutHJzpOctSWuSwNlJNDOMLDpYexlAlirOLfkIICmdvFEO2I1m2I0='),g=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ANNfjrMpIgBXnHwuvhuKtMEnLzZumeFDqlrJcdsIyZkpqUpFbyDBIvp2I1n2I0='),h=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('jJNuhTFoVpIfmSWIqBjNaZAhYhhzqYyEVgldFBgwdXaCFwQsdElcqPF2I1o2I0='),i=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('FWIjpiwWSxvJvYCFLitYZuafsOMxySuSoTEkQKBnlGFDlfxGRyQRvhl2I1p2I0='),j=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('GKuqEMNhIUbURlPRRwbUFFGcNBYFIzNPBIBkdcvITXZIXSdWyRsquDw2I1q2I0='),k=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('yqWvWalNNFbkLXFctdpHODnzbsygGEuNrBXuMXONAbTwpkluNBqXmjj2I1r2I0='),l=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('cQPsUkzoCRsdKCdckAWQGKZmQQaMFOdtPjWpEnKCwnfpGltequLQkqZ2I1s2I0='),m=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('GqHdIfwTlLzNSsWLsHYYOMVIGXxNarWUlDsLwpduTlZQaXMMfwrJDyB2I1t2I0='),n=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('fddqbsHtBhKKHjVbZKFGyENDzcGDiMKXMLAdiykkKqPHLmTnJdciqhJ2I1u2I0='),o=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('uMbjZIavoRHeBaiBVDvThOMCZSmJtfeipQwhLXyqiwbyImrfWNqEpeM2I1v2I0='),p=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('rEiAafVsajZEuWjhAEoBSUxYyTxsWiWczHaXSHncITBQcXFVWYomIfH2I1w2I0='),q=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('tuyGCfnupyPHcdxZLdjryKxrwfkekCJYRqpuekhObXYrwKYxsoleMFS2I1x2I0='),r=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('sOBTmAWDLmLwHTxCVthpqHxhhdrVHaUocTnofBIATHgcHLLWVPKowcq2I1y2I0='),s=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('rMQfIMIUyxOAdiLYDcCdoKWTlKjsRiWftoRlNgdZYAOxaUmvsVSqiqC2I1z2I0='),t=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ttgdxwOHgOacYlRnidifEJqcvqFAPxuXQYPAFsuMEDWNiWQUNfbbYst2I102I0='),u=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('flJUDpTeZcYNPKIXRurvjQPFVuoZacSQXbtKMhAIBgYQYEAKaytYXTl2I112I0='),v=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('MTYViOSJvrRkrnLKdPGHabXSIawwHMHtlEMYIPdlqMenpnqVrqhTcYF2I122I0='),w=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('mBWUBGtHpWojOEbLdwMkZyerkuEEjdlcFqAyUNxneLrEWzJIAzJnvRx2I132I0='),x=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('vBLMKDCWDbFJkJBhxyYtJzYtmraFQtxafxIqZvddXHLNScBLSpeApLc2I142I0='),y=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('IUYxtUDqpAmEIoWYIDxiUjfVMtiELEgMvKbAsRpmdQDuieugdCxwcXq2I152I0='),z=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('wRfqsKQBQxdDecxPeZlQeJwpsskklRlRPCkPyvkWblXEDipYNowYZAd2I162I0=')},
+    Slash = {a=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('SDoqpSpCwBLBrXCrzOdHPhviqvzSziNwliAcyHEXfdlmlIDsFzvJtmu2YBh2YA='),b=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VyCTtSisnGMcJNGNEAdZzyPBxGEdRLkrkczYoAaOcImIPhgsmRQPdvq2YBi2YA='),c=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VkCAftZFwHHsRbHeQrtKeTgqaWVshdTriZfFVxLPKcKWbmriUPjGrts2YBj2YA='),d=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('KcBZHfaDXYirWYlFgzKuBLnNIkuAOGHUOrLOYAbLeOVQlQSqzWwZKgB2YBk2YA='),e=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('wPxoRLFigrOzSGECjspHhIJnwwxHnCjqZctUdRTcRUPXWGJomelRkDw2YBl2YA='),f=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('MTplZqnewANKJeBXSnXvpxmJTHkBCaIrqkWyPGIkTmXfXSKzQiHJvmi2YBm2YA='),g=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('mOidmBRJvLfWUgURnIyprNpvoDGTFPNzsoLBkhGxUIkppRhiKWueCPS2YBn2YA='),h=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('yjhlObUmfLrRJwEInhHalUvhidNalZyBfIipRUvFFkhZqePyNuOTSmi2YBo2YA='),i=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('RqKwZAcInNisNrbGxlhemqeIrvGrFsMPCAURdawUIDsXNSoflgIRxcT2YBp2YA='),j=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('KbgdTLmAeiIDnbLsIiScsQLfAlGasNFIiSgDnpnjgvovWEVAlVnsKRR2YBq2YA='),k=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('xisbwpetJKQniPQqWmMCVerHStExTFQKaFThTBousXtWrEIvUDVYiDr2YBr2YA='),l=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('LXSCxYjuLBaRFwYKBYhmkAynhGoBVTngFJLpjrdJSlVCAhHWrsOkPDr2YBs2YA='),m=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('hUOvyCnfpdpDJbWofDuaHvfsrzRvZBnNKBlkvVtcNuEHIxLezCzwAcG2YBt2YA='),n=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('PuTqZNcCorjUCAJfIzpoNFCOYZwFibxCMxiiRqaznBxUsxJVYDnnlfA2YBu2YA='),o=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('CZtfVtZgHnnOEUFoDaeRCtDZCYzTbhMvYjmjItMckdzJEDOWqwagUzK2YBv2YA='),p=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('PkOOcHWWipVtsuDaPXuDTFGpxQIjcqVMTZigGwoxfhMcbqjPjfkRVcT2YBw2YA='),q=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ANbhXVqCQPeaRKDDMDTIJYLbbRYOyFoRnCTXuQygQnudNNBMbTuybez2YBx2YA='),r=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('MgatdqigAuiuEKehXPXbjhUPisRQpneupMGnbqYeBOJdLJHdYAKrhZA2YBy2YA='),s=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('fKLZlflykFJVSImiXKSejVQlxNsYZuReNmTpYoEwzogWZtzPWxoPHhZ2YBz2YA='),t=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('hpciRkGNwUcQInQHcQcsccxKoDyIsocPWlmzeitVEeGAIOPvXSrLaOx2YB02YA='),u=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('DiBFzYrtFmyGDkoNZmNdlbOVvGXQCkQsfvPhtXFGXQBcZSPUxRTeOEE2YB12YA='),v=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('LItzVupcSZLWJZgNSxgyaHEcSvuYakutdqvyhlVsSKgggDnYkeTmLAH2YB22YA='),w=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('TndDmnnfdqEgoZbnswQqKrLoCYKJTivbUCcPCFTeyoOuLVCmntriRaI2YB32YA='),x=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VVjiwMBdwuBeVYJzadsVSCOINkpqQDdpUwjeTmOMUIypEhKbcfygGIA2YB42YA='),y=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('PMkmWOMLzNTcGDzwtBVhzqtWouabBbYNPnUIhjfzZAfkKpaQQgbiJIs2YB52YA='),z=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('yHrIbdtzBPeBBXtKSBqKeTKmSAAERVcqsvsABMkiUNxLgIrZOJxilRn2YB62YA=')}
+}
+local currentMethod = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('GgDkLDzOuyuwEDahyiMKuOAipPUGjgjtKljuOXgiIXepEpxKcuSPmtnQ29tbWE=')
+local inputText = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('SQMMiHGbqsvEYaSxvujblVtRdyiUNsklYGKfIBqDugveGfyDcKExcWH')
+local outputText = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('aGiMpKhGyTciZPnhMUixdrsHpiTCSjQdGDZIgVkellFhcDVrJYMeKkw')
+
+-- ENCODERS
+local function encodeMix(t)
+    local o=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ZkrHfOfBXtIsnLONaoOIuwMAipdDTDZCuOAlsdGCTkmfCIlKIxgGQTq')
+    t=string.reverse(t:lower())
+    for i=1,#t do
+        local c=t:sub(i,i)
+        local choice = math.random(1,2)
+        if methods.Comma[c] and methods.Slash[c] then
+            o..=(choice == 1 and methods.Comma[c] or methods.Slash[c])
+        else
+            o..=(methods.Comma[c] or methods.Slash[c] or c)
+        end
+    end
+    return o
+end
+
+local function encode(t)
+    if currentMethod == oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('GCdxCOMjzjDHRurlDUpDmxDNxKlQDfctTlWxglofbempQLHkSEASkhOTWl4') then
+        return encodeMix(t)
+    else
+        local o=oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('juCATbAisMXJVANvTqUxYNfcMcSzeshThaSTbgeCAhfwKqxSrMZaRPi')
+        t=string.reverse(t:lower())
+        for i=1,#t do
+            local c=t:sub(i,i)
+            o..=(methods[currentMethod][c] or c)
+        end
+        return o
+    end
+end
+
+-- SEND CHAT
+local function sendChat(m)
+    local ok,ch=pcall(function()
+        return TextChatService.ChatInputBarConfiguration.TargetTextChannel
+    end)
+    if ok and ch then
+        ch:SendAsync(m)
+    else
+        local ev=ReplicatedStorage:FindFirstChild(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('UqVEyJYcGhQjqxvVOHgnMNjsXsMiOyItJoonNRuCTOCkhBDynRArBPERGVmYXVsdENoYXRTeXN0ZW1DaGF0RXZlbnRz'))
+        if ev then
+            ev.SayMessageRequest:FireServer(m,oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ELtoZMGkdYTJAdSrdPmYaiqvbYwiVWIMOyPrCGgzqPKapNTAjZhFfrNQWxs'))
+        end
+    end
+end
+
+-- NOTIFY
+local function notify(title,text)
+    pcall(function()
+        game:GetService(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ZdImIWiglIpmkNiYjeXSgkNqhyeIZaZhlDyjMXNZxlqQGjvYDryXkpwU3RhcnRlckd1aQ==')):SetCore(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('qgkaFVaSosAywEqTmIceHNMtLtkcSormnLZousiUWBgFdWtsclSUaOtU2VuZE5vdGlmaWNhdGlvbg=='),{Title=title,Text=text,Duration=2})
+    end)
+end
+
+-- FILTER CHECK
+local function isFiltered(m)
+    local ok,res=pcall(function()
+        return TextService:FilterStringAsync(m,player.UserId)
+    end)
+    if ok and res then
+        return res:GetNonChatStringForBroadcastAsync()~=m
+    end
+    return false
+end
+
+-- GUI
+local gui = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('QTFuFCIuuSTumcDOXCVMroRLlRSWvGQlRoMRYezoxxaCcecKfaMIBeIU2NyZWVuR3Vp'), PlayerGui)
+gui.Name = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('cZiywbeMLgOKWAPdrbeuJjhSfBQcmYIvGoQnmtsdHggODlSdplvQndfU2ltcGxlQnlwYXNzZXJWMw==')
+
+-- KEY FRAME
+local keyFrame = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('UqqINuMjEHSRSJFqNkleXazosKzeiUTdGJmksNwaItMmwPobWhXIUmGRnJhbWU='), gui)
+keyFrame.Size = UDim2.new(0,350,0,140)
+keyFrame.Position = UDim2.new(0.5,-175,0.5,-70)
+keyFrame.BackgroundColor3 = Color3.fromRGB(40,40,40)
+keyFrame.ClipsDescendants = true
+keyFrame.Active = true
+keyFrame.Draggable = true
+Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('oYFTOkKwwUQzqdgoAIrzxpEhuIdkCsgZfRDVYkQFTXUsuWMcPxoESoRVUlDb3JuZXI='), keyFrame).CornerRadius = UDim.new(0,12)
+Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('bDCuIfqhCENbpGjTFOersHnnxbQRlQsUJWrjOAiPZNPCRGFAepArNgEVUlTdHJva2U='), keyFrame).Thickness = 1.2
+keyFrame.UIStroke.Color = Color3.fromRGB(50,50,50)
+keyFrame.UIStroke.Transparency = 0.3
+
+local keyTitle = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('CqEHkhdULqBdociXioygHsayTrQqYrUaiFvUFiwfYWYqBiLPbqvhfRbVGV4dExhYmVs'), keyFrame)
+keyTitle.Size = UDim2.new(1,0,0,30)
+keyTitle.Position = UDim2.new(0,0,0,0)
+keyTitle.BackgroundTransparency = 1
+keyTitle.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('aheZMteOHEACzPdVjnSqcDGdIFUowaXDHyReqYCyXHHGojGvEdXJElRRW50ZXIgS2V5')
+keyTitle.TextColor3 = Color3.fromRGB(255,255,255)
+keyTitle.Font = Enum.Font.GothamBold
+keyTitle.TextScaled = true
+
+local keyInput = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('OQnANdHLMMqBJBnTBYtegzchTmNYwUaSjXYPVnarbwCnPZNnDmSyaXEVGV4dEJveA=='), keyFrame)
+keyInput.Size = UDim2.new(0, 310, 0, 40)
+keyInput.Position = UDim2.new(0,20,0,50)
+keyInput.BackgroundColor3 = Color3.fromRGB(55,55,55)
+keyInput.TextColor3 = Color3.fromRGB(255,255,255)
+keyInput.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('PKebJIFiEWKbeNsPNWbyaEYecqsaapLqkpjnJTGaLxDmvPglUrHoMcV')
+keyInput.ClearTextOnFocus = false
+
+local enterBtn = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ftQvxzZiGobcRMXXDIuADBYLKOFNhsTZhfVkrRozemKDFvxWNQyUotfVGV4dEJ1dHRvbg=='), keyFrame)
+enterBtn.Size = UDim2.new(0,120,0,35)
+enterBtn.Position = UDim2.new(0.5,-130,0,95)
+enterBtn.BackgroundColor3 = Color3.fromRGB(120,120,120) -- greyed
+enterBtn.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('vJnHEJaxhdKyKkLkiCWBHTwEoKFTVBYKgHgBeqJpCOCleJnfsGRMMuMRW50ZXI=')
+enterBtn.TextColor3 = Color3.fromRGB(255,255,255)
+enterBtn.AutoButtonColor = true
+enterBtn.Font = Enum.Font.GothamBold
+enterBtn.TextScaled = true
+Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('OfOZtnIUQVcabcTOyVAuZISiUHcDAAxyOaMWKhKGjHSssGkuTfJwjjbVUlDb3JuZXI='), enterBtn).CornerRadius = UDim.new(0,12)
+
+local copyBtn = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('uVSsVFsFxVqgyILYIETXxPZJsBZLYRbOdgnGioxcMJlXUblyCoRIScOVGV4dEJ1dHRvbg=='), keyFrame)
+copyBtn.Size = UDim2.new(0,120,0,35)
+copyBtn.Position = UDim2.new(0.5,10,0,95)
+copyBtn.BackgroundColor3 = Color3.fromRGB(120,120,120) -- greyed
+copyBtn.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('mzSZVNmONcPMWJOHGzZRGWHEZWVEbmHMNBzcjaSvVDNkPrVhoJFWvAqQ29weSBLZXk=')
+copyBtn.TextColor3 = Color3.fromRGB(255,255,255)
+copyBtn.AutoButtonColor = true
+copyBtn.Font = Enum.Font.GothamBold
+copyBtn.TextScaled = true
+Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VmlRAhczDeASRYVrxWsffeZQlwlPfxSaAKFDaXHnZYnUOvYhXAqQYpaVUlDb3JuZXI='), copyBtn).CornerRadius = UDim.new(0,12)
+
+copyBtn.MouseButton1Click:Connect(function()
+    if setclipboard then
+        setclipboard(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('pPAKPzkhLaKLmxBejfZYjIqpwBHZvzNfxyIuMPfsJvIeWJPhdHGhkgEaHR0cHM6Ly9kaXNjb3JkLmdnL1U1czU2dFhUSGE='))
+        notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('bcUvKZbTCxrEFRpvzjcpcBCYQLtBHHETTqfjpIIBNPzXBSODhThowOzU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('DFxSwHsOfGWhfJCwBrqhmZzzmMCGpUXWnDLuOajwhtSTAxUEEafHLxIRGlzY29yZCBsaW5rIGNvcGllZCB0byBjbGlwYm9hcmQh'))
+    else
+        notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('pNBdWsdIJKeORraGCWnBtBazygjtoOqAbErBfMTuhZGqlrVTfeZqVwvU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('vbKXINVQaLmhkOWNjfoqyMfpQuktNINollJdgqQhepLaGeUUlAdBKeWQ2xpcGJvYXJkIG5vdCBzdXBwb3J0ZWQgaW4gdGhpcyBleGVjdXRvcg=='))
+    end
+end)
+
+
+enterBtn.MouseButton1Click:Connect(function()
+    if keyInput.Text == KEY then
+        notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('NvDoSAhPolRUDMIlIfDmRyXbCZZSHlBMisNdQdSWAiOrVooRnPaHBwOU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('gyLKcrZYJQXUPRxdaAJsKfLwbMMwqaHskFoqqvtZEekfSptDIgsqcveS2V5IGFjY2VwdGVkIQ=='))
+        TweenService:Create(keyFrame,TweenInfo.new(0.4),{Position=UDim2.new(0.5,-175,0.5,-500),BackgroundTransparency=1}):Play()
+        task.wait(0.45)
+        keyFrame:Destroy()
+
+        
+        local mainFrame = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VexaeRESkdpDnOtTgvsaZatLmvSwcwxnuRdnIwWwURQLJoGCxauFTtvRnJhbWU='), gui)
+        mainFrame.Size = UDim2.new(0,380,0,260)
+        mainFrame.Position = UDim2.new(0.5,-190,0.5,-130)
+        mainFrame.BackgroundColor3 = Color3.fromRGB(25,25,25)
+        mainFrame.ClipsDescendants = true
+        mainFrame.Active = true
+        mainFrame.Draggable = true
+        Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('xeepjglCXJlBtYJyYKQUSCvpGqPgqNPJsIbVqcpOQJlHYGWgWbxRfxSVUlDb3JuZXI='), mainFrame).CornerRadius = UDim.new(0,6)
+        local shadow = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('nRdNGibqHPqQuHGyvowFwkDCsKIfUEEuCCzFOXycEAqGblTacLpJNOmVUlTdHJva2U='), mainFrame)
+        shadow.Thickness = 1.2
+        shadow.Color = Color3.fromRGB(50,50,50)
+        shadow.Transparency = 0.3
+
+        
+        local topBar = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('iIoqjHxjmTTLLBoHilZdNsHBBzSDYGNYctQVmJCdGivdikNQpUjXLMmRnJhbWU='), mainFrame)
+        topBar.Size = UDim2.new(1,0,0,30)
+        topBar.Position = UDim2.new(0,0,0,0)
+        topBar.BackgroundColor3 = Color3.fromRGB(40,40,40)
+        Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('TEHGcmfNxvQjAqUAzpDbQZgKgXEBRsaUVYazhYGqNXMwdnsTDynycNyVUlDb3JuZXI='), topBar).CornerRadius = UDim.new(0,6)
+
+        local title = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('mWqfclNkzyoRrHQDmxcYcXwgqBuUXarYsehyMEWHFxXYMebVfphQHXkVGV4dExhYmVs'), topBar)
+        title.Size = UDim2.new(1,-60,1,0)
+        title.Position = UDim2.new(0,10,0,0)
+        title.BackgroundTransparency = 1
+        title.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('mRhsdheEbCveFJoLwucSTeSyhJwwXlvGxWbTquLXKHlKPtckhOaFSQrU2ltcGxlIEJ5cGFzc2VyIFYz')
+        title.TextColor3 = Color3.fromRGB(255,255,255)
+        title.TextXAlignment = Enum.TextXAlignment.Left
+        title.Font = Enum.Font.GothamBold
+        title.TextScaled = true
+
+        local closeBtn = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('OQWBeHZUtpzzPjzvuIeSqYqbRcuODDeqcoIkXiiTIYJVFqpPnZJEcFwVGV4dEJ1dHRvbg=='), topBar)
+        closeBtn.Size = UDim2.new(0,25,0,25)
+        closeBtn.Position = UDim2.new(1,-30,0,2)
+        closeBtn.BackgroundColor3 = Color3.fromRGB(180,0,0)
+        closeBtn.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('XRuInCzzcSxcVAfXkTqAxKWkbfYdaSUileLxUlUxWZIHBrEKObTEKjTWA==')
+        closeBtn.TextColor3 = Color3.fromRGB(255,255,255)
+        closeBtn.Font = Enum.Font.GothamBold
+        closeBtn.TextScaled = true
+        Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('UEBmAkWLkMzPKTtAWOQKTGeMlVFCIKqjkzSZerkjGxxXcZlXKkbJItHVUlDb3JuZXI='), closeBtn).CornerRadius = UDim.new(0,6)
+        closeBtn.MouseButton1Click:Connect(function() gui:Destroy() end)
+
+        
+        local minBtn = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('hliGHBZnFHaNCFcpWXjuIbWVZbAxaInCZfscutbuFKKilcXhmFeFrnxVGV4dEJ1dHRvbg=='), topBar)
+        minBtn.Size = UDim2.new(0,25,0,25)
+        minBtn.Position = UDim2.new(1,-60,0,2)
+        minBtn.BackgroundColor3 = Color3.fromRGB(80,80,80)
+        minBtn.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('XLJzYfTazyuULWJyIKurmjdWqpKxstcemlzaLCiemiqvKTlhVbSwfLiXw==')
+        minBtn.TextColor3 = Color3.fromRGB(255,255,255)
+        minBtn.Font = Enum.Font.GothamBold
+        minBtn.TextScaled = true
+        Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('zUbwhjgfzWfJzVQNFXTtCTAyEdmHnPPgBiFtdoKvdQCrsvrsxeyVgJwVUlDb3JuZXI='), minBtn).CornerRadius = UDim.new(0,6)
+        local minimized = false
+        minBtn.MouseButton1Click:Connect(function()
+            if not minimized then
+                TweenService:Create(mainFrame,TweenInfo.new(0.25),{Size=UDim2.new(0,380,0,30)}):Play()
+                minimized = true
+            else
+                TweenService:Create(mainFrame,TweenInfo.new(0.25),{Size=UDim2.new(0,380,0,260)}):Play()
+                minimized = false
+            end
+        end)
+
+        
+        local inputBox = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WshMNTggttZpucnIhwAwkNctlyvNArgZKQHINEMaIsRmlXqLZXfmblUVGV4dEJveA=='), mainFrame)
+        inputBox.Size = UDim2.new(0,350,0,60)
+        inputBox.Position = UDim2.new(0,15,0,40)
+        inputBox.BackgroundColor3 = Color3.fromRGB(45,45,45)
+        inputBox.TextColor3 = Color3.fromRGB(255,255,255)
+        inputBox.ClearTextOnFocus = false
+inputBox.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('iVUJcDXomrUNqKtsdnqswNaxFQgcjzfeDbXAdCIwXvFBeNoMIglTOQv')
+
+        local outputBox = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('KZbWzsIVJQLfTMhTeGxBbPTnQcfndwRzwJZHoBTSzgPxOirfsreJhaFVGV4dEJveA=='), mainFrame)
+        outputBox.Size = UDim2.new(0,350,0,60)
+        outputBox.Position = UDim2.new(0,15,0,110)
+        outputBox.BackgroundColor3 = Color3.fromRGB(30,30,30)
+        outputBox.TextColor3 = Color3.fromRGB(255,255,255)
+        outputBox.TextEditable = false
+outputBox.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('QNONLEJTeGQLsLYHAujtBtXDllmjgPniMeKpjRgaymZWQencTFKMhGH')
+
+        local sendBtn = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WMsSJSAdvqhpwdarrnYwdslngtKBlRkXXVxwQaTMbxbLMgmvEFFzvTxVGV4dEJ1dHRvbg=='), mainFrame)
+        sendBtn.Size = UDim2.new(0,100,0,30)
+        sendBtn.Position = UDim2.new(0,15,0,180)
+        sendBtn.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('zOBOIzsiOjXbbjMnHEpzimxgtpoxKawPWVCvlTWrsmPOZIOtWHDQePBU2VuZA==')
+        sendBtn.BackgroundColor3 = Color3.fromRGB(80,80,80)
+        sendBtn.TextColor3 = Color3.fromRGB(255,255,255)
+        sendBtn.AutoButtonColor = true
+        Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('veqkPNNbtqanWrnzqkQWYQigfJpdgRPpdMuInCTpUbepLUjVpTZtOtBVUlDb3JuZXI='), sendBtn).CornerRadius = UDim.new(0,6)
+
+        sendBtn.MouseButton1Click:Connect(function()
+            if inputBox.Text ~= oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('rITYaoFOVPZbvgmVddNSDSqwxUtYdDEWIdbiOLhpSoRzjfGqrxtkCeA') then
+                inputText = inputBox.Text
+                outputText = encode(inputText)
+                if isFiltered(outputText) then
+                    outputBox.TextColor3 = Color3.fromRGB(255,100,0)
+                    outputBox.Text = outputText
+                    notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('NnmzNqaRRWlVSfqPZgWAaiXmOTGfruPTKkthsBbGwRKYndXfCSKuKYUU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('JtHEAOjHRcikJvGomVlPGBxCSSEiWpVsSLsNzONyIwZMZoXEwveXejwTWVzc2FnZSB3b3VsZCBiZSBmaWx0ZXJlZA=='))
+                    return
+                end
+                outputBox.Text = outputText
+                outputBox.TextColor3 = Color3.fromRGB(255,255,255)
+                sendChat(outputText)
+            end
+        end)
+
+        inputBox:GetPropertyChangedSignal(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('jmzIJheyUyHMBSvAJkxrODaZFIbnBrhuDnJRyvrnzzrVmTZusUQBZIFVGV4dA==')):Connect(function()
+            inputText = inputBox.Text
+            outputText = encode(inputBox.Text)
+            outputBox.Text = outputText
+        end)
+
+      
+        local methodLabel = Instance.new(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WfxnPuzhUqPvOyDdSsgbzALiDVZFwTGffYxaiiXUISfCopsXpKORIYdVGV4dExhYmVs'), mainFrame)
+        methodLabel.Size = UDim2.new(0,350,0,25)
+        methodLabel.Position = UDim2.new(0,15,0,225)
+        methodLabel.BackgroundTransparency = 1
+        methodLabel.TextColor3 = Color3.fromRGB(255,255,255)
+        methodLabel.Font = Enum.Font.GothamBold
+        methodLabel.TextScaled = true
+        methodLabel.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('uoSCnRDwezUGPKpvFCikvZyfcQvkgOumigcryWBTKCZlgohGQvDRLfaVHlwZSA6Y29tbWEsIDpzbGFzaCwgb3IgOm1peCBpbiBjaGF0IHRvIGNoYW5nZSBtZXRob2QgfCBDdXJyZW50OiA=')..currentMethod
+
+        
+        local function handleChatMessage(messageData)
+            local msg = messageData.Text or messageData.Message
+            if msg then
+                local m = msg:lower()
+                if m == oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('xCYSQhffXHgOsYlmHiVdMYnQEvYuScPKVeSalZbIuYJTMTXexvhcbXCOmNvbW1h') and currentMethod ~= oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('oMcFiITMCdVsLWXsHABfSFgEkMhLTPUuDWhvEBsByCBeSNFpETcqcdrQ29tbWE=') then
+                    currentMethod = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('zygnklSoTLIVKhtbKfElMrDkxiriOmIFYcFUwuRimRAfDhFuJbJTYvYQ29tbWE=')
+                    notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('HsochHrpeqSLMbFPPAndQVEXvXAuJoWsKVwyDcxmdfKWtGdEuaVShqjU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('cFALwzfazeZxxarLGybOPVSswOFJtRMQmJahGHimcinThKoiapXdMHtTWV0aG9kIHN3aXRjaGVkIHRvIENvbW1h'))
+                elseif m == oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('HgisZPnSBCkgMMCTJOgShrgPoasdqwtbNocMzlkmCQBjyiBfoeIPBLsOnNsYXNo') and currentMethod ~= oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('CRIsVBnKXLuAIDoubJsZvWzoRMwZbdyajsfwleEvspPScaUYzRqYJWwU2xhc2g=') then
+                    currentMethod = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('PEaPBaFyUyLkbFVkmVsvadFWgvoFOKuAVBAnxXVhPYrcFWIygpZlbFaU2xhc2g=')
+                    notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('LpTllKyLuPrlRoRiBDOTbdxUkzVmZKdeFQlsAxosjmIPKLeklqGHAkVU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('zdjAnpPItIEAqkBPRHdZtvMcBOOTRjqMSjZsBfvCVsridnimSkrAnEATWV0aG9kIHN3aXRjaGVkIHRvIFNsYXNo'))
+                elseif m == oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('QhNNFAlUiEPcRvjSlJWIeeiatDvytFqRtCmAiCjIrEhokmLavrOOixJOm1peA==') and currentMethod ~= oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('iHGuBxmdmAlHbBJyCmknMPbjWmvxXWrQDUKClYOyHKmMrplKAnfaxzmTWl4') then
+                    currentMethod = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('tsKOrWZnCcuyhYIHIZckauRKDSEmikbfRaFIAYNamRqBHWNfFNzuFTgTWl4')
+                    notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('eFcMSDssxqzAPUVFafINdbrsWQbEkvHIqdGFXZyqUHRGhVPpwfueYroU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('jCvfosyFnmoszwavgKHaYVVwObdvCFZfPDKjdKKOBWmToxhhxRrcurLTWV0aG9kIHN3aXRjaGVkIHRvIE1peA=='))
+                end
+                methodLabel.Text = oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('ABJiYCoGZetyEYszLoaWMVfMylYyTrvvthZHplfmXarJJPUWaIbWetEVHlwZSA6Y29tbWEsIDpzbGFzaCwgb3IgOm1peCBpbiBjaGF0IHRvIGNoYW5nZSBtZXRob2QgfCBDdXJyZW50OiA=')..currentMethod
+                if inputBox.Text ~= oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('VjJoljhYSQqzUAChlfTAdfJYVzGAFfSMiLYxyJrvpeWXKpbhxYwqfyo') then
+                    outputBox.Text = encode(inputBox.Text)
+                end
+            end
+        end
+
+        local ok, target = pcall(function()
+            return TextChatService.ChatInputBarConfiguration.TargetTextChannel
+        end)
+        if ok and target then
+            TextChatService.OnIncomingMessage = handleChatMessage
+        else
+            local ev = ReplicatedStorage:FindFirstChild(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('iwivDMaxWAViBLdUknVpbvAIUTJAvSRFdTdgyRWPkbCzHawqDVMGUDQRGVmYXVsdENoYXRTeXN0ZW1DaGF0RXZlbnRz'))
+            if ev and ev.OnMessageDoneFiltering then
+                ev.OnMessageDoneFiltering.OnClientEvent:Connect(handleChatMessage)
+            end
+        end
+    else
+        notify(oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('WgriHCJSPcfTesGPSSiRZBXlMBkppUHNQJSGpCrjgxenfaoqaSfLqxbU2ltcGxlIEJ5cGFzc2VyIFYz'),oDobxJIOOSxLapXGMCeRYiklHxfaVEzJMTubFSCBsoQvbumMNhnwgnXWoLerYwGhwBkVZVMPRrlmzsIrinLmbLMj('vpMKeSQNLOCXIVrokRLcFSoHzeZcxcbxolMRmynZEodfxoyoQTTUPaRSW52YWxpZCBLZXk='))
+    end
+end)    
